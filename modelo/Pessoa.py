@@ -1,17 +1,20 @@
 class Viagem:
-    nome = ""
-    pais_Origem = ""
-    pais_Destino = ""
-    ativo = False
+    def __init__(self, nome, pais_Origem, pais_Destino):
+        self.nome = nome
+        self.pais_Origem = pais_Origem
+        self.pais_Destino = pais_Destino
+        self.ativo = False
 
-pessoa_Vinicius = Viagem()
-pessoa_Luiza = Viagem()
+    def __str__(self):
+        return f"{self.nome} | {self.pais_Origem} | {self.pais_Destino} | {self.ativo}"
 
-pessoa_Luiza.nome = "Luiza Ribeiro"
-pessoa_Luiza.pais_Origem = "Brasil"
-pessoa_Luiza.pais_Destino = "Alemanha"
+
+
+pessoa_Vinicius = Viagem("Vinicius", "Brasil", "Canada")
+pessoa_Luiza = Viagem("Luiza Ribeiro", "Brasil", "Alemanha")
 
 Viagens = [pessoa_Luiza, pessoa_Vinicius]
 
-print(Viagens)
+print(pessoa_Vinicius)
+print(pessoa_Luiza)
 
